@@ -29,13 +29,13 @@ export default async function TopicList() {
             {topics.map((t: any) => (
                 <div key={t._id} className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start">
                     <div>
-                        <h2 className="font-bold text-2xl">{t.title}</h2>
-                        <h2>{t.description}</h2>
+                        <h2 className="font-bold text-2xl text-blue-900">{t.title}</h2>
+                        <h2 className="text-blue-900">{t.description}</h2>
                     </div>
                     <div className="flex gap-2">
                         <RemoveBtn id={`${t._id}`} />
                         <Link href={`/editTopic/${t._id}`}>
-                            <HiPencilAlt size={24} />
+                            <HiPencilAlt size={24} className="text-blue-900" />
                         </Link>
                     </div>
                 </div>
